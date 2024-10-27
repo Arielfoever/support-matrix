@@ -103,5 +103,5 @@ jobs:
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "[CI #${{ github.run_number }}](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}) powered by [${{ github.repository }}](${{ github.server_url }}/${{ github.repository }}) has successfully deployed tables to pages." >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "Visit \`${{ steps.deployment.outputs.page_url }}\{name}\` for tables." >> $GITHUB_STEP_SUMMARY
+          echo "Visit \`${{ steps.deployment.outputs.page_url }}{name}\` for tables." >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
