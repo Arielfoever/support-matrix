@@ -85,7 +85,7 @@ jobs:
           echo "## event" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "\`\`\`bash" >> $GITHUB_STEP_SUMMARY
-          echo "${{ github.event }}" >> $GITHUB_STEP_SUMMARY
+          echo "${{ toJSON(github.event) }}" >> $GITHUB_STEP_SUMMARY
           echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
 
