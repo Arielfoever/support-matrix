@@ -4,7 +4,7 @@ name: Generate and Upload Tables
 on:
   # Runs on pushes targeting the default branch
   push:
-
+  pull_request:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
     inputs:
@@ -78,6 +78,14 @@ jobs:
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "\`\`\`bash" >> $GITHUB_STEP_SUMMARY
           cat ${{ github.workspace }}/build.log >> $GITHUB_STEP_SUMMARY
+          echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+
+          echo "## Debug" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "\`\`\`bash" >> $GITHUB_STEP_SUMMARY
+          echo "${{ toJSON( github ) }}" >> $GITHUB_STEP_SUMMARY
+          
           echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
 
